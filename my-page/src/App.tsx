@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import data from './user.json';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const user = data;
+
+const App = () => (
+  <div className="App">
+    <h1>Hello! I am {user.firstName} {user.secondName}.</h1>
+    <h2>{user.shortBiography}</h2>
+    <h3>My contact: {user.publicContact}</h3>
+  </div>
+)
 
 export default App;
